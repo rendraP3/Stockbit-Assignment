@@ -9,7 +9,6 @@ dependencies {
     implementation project(Modules.common)
 
     implementation project(Modules.repository)
-    implementation project(Modules.navigation)
     // KOIN (Because each feature has to handle its dependencies)
     implementation Libraries.koin
     implementation Libraries.koinViewModel

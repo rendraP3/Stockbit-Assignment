@@ -3,6 +3,7 @@ apply from: '../android_commons.gradle'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
 dependencies {
+    implementation project(Modules.assignment)
     implementation AndroidLibraries.navigation
     implementation AndroidLibraries.navigationFrag
 }

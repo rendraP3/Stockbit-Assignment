@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_assignment"
+    app:startDestination="@id/fragment_auth">
+
+    <fragment
+        android:id="@+id/fragment_auth"
+        android:name="com.stockbit.assignment.presentation.fragment.AuthFragment"
+        tools:layout="@layout/fragment_auth"
+        android:label="fragment_auth">
+
+        <action
+            android:id="@+id/to_fragment_market"
+            app:destination="@id/fragment_market" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_market"
+        android:name="com.stockbit.assignment.presentation.fragment.MarketFragment"
+        tools:layout="@layout/fragment_market"
+        android:label="fragment_market" />
+
+</navigation>

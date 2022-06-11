@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_fragment_header_label">Masuk</string>
+    <string name="auth_fragment_btn_google_label">Masuk dengan google</string>
+    <string name="auth_fragment_btn_facebook_label">Masuk dengan facebook</string>
+    <string name="auth_fragment_separator_label">Atau</string>
+    <string name="auth_fragment_email_field_hint">Username atau email</string>
+    <string name="auth_fragment_password_field_hint">Password</string>
+    <string name="auth_fragment_forgot_password_label">Lupa Password?</string>
+    <string name="auth_fragment_btn_login_label">Login</string>
+    <string name="auth_fragment_btn_login_with_biometric_label">Masuk dengan fingerprint</string>
+    <string name="auth_fragment_btn_register_label">Daftar sekarang</string>
+    <string name="auth_fragment_no_account_label">Belum punya akun?</string>
+
+    <string name="nothing_happened_label">This button does nothing</string>
+    <string name="error_username_not_matched">Username atau email yang anda masukan salah</string>
+    <string name="error_password_not_matched">Password yang anda masukan salah</string>
+</resources>

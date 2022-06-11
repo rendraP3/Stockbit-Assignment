@@ -14,6 +14,8 @@ object Modules {
     val remote = ":data:remote"
     val model = ":data:model"
     val repository = ":data:repository"
+
+    val assignment = ":features:assignment"
 }
 
 object Releases {
