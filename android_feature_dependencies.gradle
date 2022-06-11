@@ -13,8 +13,6 @@ dependencies {
     // KOIN (Because each feature has to handle its dependencies)
     implementation Libraries.koin
     implementation Libraries.koinViewModel
-    // LIBRARIES
-    implementation Libraries.shimmer
     // TEST
     androidTestImplementation TestLibraries.androidTestRunner
     androidTestImplementation TestLibraries.junit
