@@ -5,6 +5,8 @@ android {
     defaultConfig {
         applicationId ApplicationId.id
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BASE_URL", '"https://min-api.cryptocompare.com/data"'
     }
     dataBinding {
         enabled true
@@ -28,4 +30,5 @@ dependencies {
     implementation AndroidLibraries.appCompat
     implementation AndroidLibraries.navigation
     implementation AndroidLibraries.navigationFrag
+    implementation Libraries.material
 }

@@ -15,4 +15,5 @@ dependencies {
     implementation AndroidLibraries.recyclerView
     implementation AndroidLibraries.navigation
     implementation AndroidLibraries.navigationFrag
+    implementation Libraries.material
 }

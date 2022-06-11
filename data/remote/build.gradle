@@ -2,6 +2,13 @@ apply plugin: 'com.android.library'
 apply from: '../../android_commons.gradle'
 apply plugin: 'kotlin-kapt'
 
+android {
+    defaultConfig {
+        buildConfigField "String", "API_KEY", '"0f82936a374ada3e3290e045bfcf636ebd3cdb83b0bb8a81ea8d1009f747838b"'
+        buildConfigField "String", "WEBSOCKET_BASE_URL", '"wss://streamer.cryptocompare.com/v2"'
+    }
+}
+
 dependencies {
     // KOTLIN
     implementation KotlinLibraries.kotlin
