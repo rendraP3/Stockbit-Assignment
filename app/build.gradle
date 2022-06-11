@@ -20,6 +20,8 @@ dependencies {
     implementation project(Modules.local)
     implementation project(Modules.remote)
     implementation project(Modules.repository)
+    // FEATURE module
+    implementation project(Modules.assignment)
     // NAVIGATION
     implementation project(Modules.navigation)
     // KOIN

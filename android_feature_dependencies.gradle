@@ -4,6 +4,7 @@
 apply plugin: 'com.android.library'
 apply from: '../../android_core_dependencies.gradle'
 apply from: '../../android_commons.gradle'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 dependencies {
     implementation project(Modules.common)
@@ -12,6 +13,8 @@ dependencies {
     // KOIN (Because each feature has to handle its dependencies)
     implementation Libraries.koin
     implementation Libraries.koinViewModel
+    // LIBRARIES
+    implementation Libraries.shimmer
     // TEST
     androidTestImplementation TestLibraries.androidTestRunner
     androidTestImplementation TestLibraries.junit
