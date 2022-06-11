@@ -1,26 +1,41 @@
 package com.stockbit.common.base
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
-import com.stockbit.common.extension.setupSnackbar
+import androidx.viewbinding.ViewBinding
 import com.stockbit.common.utils.Event
-import com.stockbit.navigation.NavigationCommand
+import com.stockbit.common.utils.NavigationCommand
 
-abstract class BaseFragment: Fragment() {
+abstract class BaseFragment<T: ViewBinding>: Fragment() {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        observeNavigation(getViewModel())
-        setupSnackbar(this, getViewModel().snackBarError, Snackbar.LENGTH_LONG)
+    protected lateinit var binding: T
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = initBinding(inflater, container)
+        return binding.root
     }
 
-    abstract fun getViewModel(): BaseViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initView()
+//        setupSnackbar(this, getViewModel().snackBarError, Snackbar.LENGTH_LONG)
+    }
+
+    protected abstract fun initBinding(inflater: LayoutInflater, container: ViewGroup?): T
+
+    protected abstract fun initView()
+
 
     // UTILS METHODS ---
 
@@ -28,15 +43,18 @@ abstract class BaseFragment: Fragment() {
      * Observe a [NavigationCommand] [Event] [LiveData].
      * When this [LiveData] is updated, [Fragment] will navigate to its destination
      */
-    private fun observeNavigation(viewModel: BaseViewModel) {
-        viewModel.navigation.observe(viewLifecycleOwner, Observer {
+    protected fun observeNavigation(viewModel: BaseViewModel) {
+        viewModel.navigation.observe(viewLifecycleOwner) {
             it?.getContentIfNotHandled()?.let { command ->
                 when (command) {
-                    is NavigationCommand.To -> findNavController().navigate(command.directions, getExtras())
+                    is NavigationCommand.To -> findNavController().navigate(
+                        command.directions,
+                        getExtras()
+                    )
                     is NavigationCommand.Back -> findNavController().navigateUp()
                 }
             }
-        })
+        }
     }
 
     /**
