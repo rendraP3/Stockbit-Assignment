@@ -54,7 +54,7 @@ object Versions {
     val mockk = "1.11.0"
     val fragmentTest = "1.1.0-alpha06"
     val databinding = "3.3.2"
-    val material = "1.6.1"
+    val material = "1.4.0"
     val scarlet = "0.1.12"
     val mpchart = "v3.1.0"
 }
