@@ -16,4 +16,7 @@
     <string name="error_username_not_matched">Username atau email yang anda masukan salah</string>
     <string name="error_password_not_matched">Password yang anda masukan salah</string>
     <string name="error_field_empty">Field tidak boleh kosong</string>
+    <string name="error_something_wrong">Uh oh, something when wrong.</string>
+    <string name="error_no_internet">Please check your internet connection</string>
+    <string name="error_empty">Currently, there\'s no data</string>
 </resources>
