@@ -7,5 +7,5 @@ import org.koin.dsl.module
 
 val assignmentModule = module {
     viewModel { AuthViewModel() }
-    viewModel { MarketViewModel() }
+    viewModel { MarketViewModel(get(), get(), get()) }
 }
