@@ -6,6 +6,7 @@ android {
     defaultConfig {
         buildConfigField "String", "API_KEY", '"0f82936a374ada3e3290e045bfcf636ebd3cdb83b0bb8a81ea8d1009f747838b"'
         buildConfigField "String", "WEBSOCKET_BASE_URL", '"wss://streamer.cryptocompare.com/v2"'
+        buildConfigField "String", "API_BASE_URL", '"https://min-api.cryptocompare.com/data/"'
     }
 }
 
@@ -20,6 +21,13 @@ dependencies {
     implementation Libraries.retrofit
     implementation Libraries.retrofitGsonConverter
     implementation Libraries.httpLoggingInterceptor
+    implementation Libraries.scarlet
+    implementation Libraries.scarletWebSocket
+    implementation Libraries.scarletAdapter
+    implementation Libraries.scarletCoroutine
+    implementation Libraries.scarletLifecycle
+    debugImplementation Libraries.chucker
+    releaseImplementation Libraries.chuckerNoOp
     // DATA MODULE
     implementation project(Modules.model)
     // TEST

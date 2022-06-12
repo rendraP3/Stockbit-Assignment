@@ -9,10 +9,13 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 dependencies {
     implementation project(Modules.common)
 
-    implementation project(Modules.repository)
+    implementation project(Modules.domain)
     // KOIN (Because each feature has to handle its dependencies)
     implementation Libraries.koin
     implementation Libraries.koinViewModel
+    // LIBRARIES
+    implementation Libraries.glide
+    implementation AndroidLibraries.lifecycleLiveData
     // TEST
     androidTestImplementation TestLibraries.androidTestRunner
     androidTestImplementation TestLibraries.junit

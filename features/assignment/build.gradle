@@ -1,7 +1,16 @@
 apply from: '../../android_feature_dependencies.gradle'
 
+android {
+    defaultConfig {
+        buildConfigField "String", "BASE_IMAGE_URL", '"https://cryptocompare.com/"'
+    }
+}
+
 dependencies {
+    implementation project(Modules.model)
     implementation AndroidLibraries.appCompat
     implementation Libraries.mpchart
     implementation Libraries.scarlet
+    implementation Libraries.shimmer
+    implementation Libraries.swipeRefresh
 }

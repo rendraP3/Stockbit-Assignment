@@ -14,6 +14,7 @@ object Modules {
     val remote = ":data:remote"
     val model = ":data:model"
     val repository = ":data:repository"
+    val domain = ":data:domain"
 
     val assignment = ":features:assignment"
 }
@@ -57,6 +58,9 @@ object Versions {
     val material = "1.4.0"
     val scarlet = "0.1.12"
     val mpchart = "v3.1.0"
+    val shimmer = "1.0.4"
+    val swipeRefresh = "1.1.0"
+    val chucker = "3.2.0"
 }
 
 object Libraries {
@@ -78,8 +82,19 @@ object Libraries {
     val material = "com.google.android.material:material:${Versions.material}"
     // SCARLET
     val scarlet = "com.tinder.scarlet:scarlet:${Versions.scarlet}"
+    val scarletWebSocket = "com.tinder.scarlet:websocket-okhttp:${Versions.scarlet}"
+    val scarletAdapter = "com.tinder.scarlet:message-adapter-gson:${Versions.scarlet}"
+    val scarletCoroutine = "com.tinder.scarlet:stream-adapter-coroutines:${Versions.scarlet}"
+    val scarletLifecycle = "com.tinder.scarlet:lifecycle-android:${Versions.scarlet}"
     // MPCHART
     val mpchart = "com.github.PhilJay:MPAndroidChart:${Versions.mpchart}"
+    // SHIMMER
+    val shimmer = "com.github.mike14u:shimmer-recyclerview-x:${Versions.shimmer}"
+    // SWIPE REFRESH LAYOUT
+    val swipeRefresh = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefresh}"
+    // CHUCKER
+    val chucker = "com.github.chuckerteam.chucker:library:${Versions.chucker}"
+    val chuckerNoOp = "com.github.chuckerteam.chucker:library-no-op:${Versions.chucker}"
 }
 
 object KotlinLibraries {
@@ -96,6 +111,7 @@ object AndroidLibraries {
     val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
     val navigation = "androidx.navigation:navigation-ui-ktx:${Versions.nav}"
     val navigationFrag = "androidx.navigation:navigation-fragment-ktx:${Versions.nav}"

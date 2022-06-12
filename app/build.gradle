@@ -5,8 +5,6 @@ android {
     defaultConfig {
         applicationId ApplicationId.id
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        buildConfigField "String", "BASE_URL", '"https://min-api.cryptocompare.com/data"'
     }
     dataBinding {
         enabled true
@@ -20,6 +18,7 @@ dependencies {
     implementation project(Modules.local)
     implementation project(Modules.remote)
     implementation project(Modules.repository)
+    implementation project(Modules.domain)
     // FEATURE module
     implementation project(Modules.assignment)
     // NAVIGATION
