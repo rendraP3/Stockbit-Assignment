@@ -1,13 +1,15 @@
 package com.stockbit.hiring.di
 
+import com.sandbox.domain.di.domainModule
 import com.stockbit.assignment.di.assignmentModule
 import com.stockbit.local.di.localModule
-import com.stockbit.remote.di.createRemoteModule
+import com.stockbit.remote.di.remoteModule
 import com.stockbit.repository.di.repositoryModule
 
 val appComponent= listOf(
-    createRemoteModule("https://api.github.com/"),
+    remoteModule,
     repositoryModule,
     localModule,
+    domainModule,
     assignmentModule
 )
