@@ -10,4 +10,9 @@ dependencies {
     implementation AndroidLibraries.lifecycleExtensions
     // KOIN
     implementation Libraries.koin
+    // TEST
+    androidTestImplementation TestLibraries.androidTestRunner
+    androidTestImplementation TestLibraries.junit
+    androidTestImplementation TestLibraries.koin
+    androidTestImplementation TestLibraries.archCoreTest
 }
