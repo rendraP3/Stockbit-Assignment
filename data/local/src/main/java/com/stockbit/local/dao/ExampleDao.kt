@@ -9,13 +9,13 @@ import java.util.*
 abstract class ExampleDao: BaseDao<ExampleModel>() {
 
     @Query("SELECT * FROM ExampleModel WHERE name = :name LIMIT 1")
-    abstract suspend fun getExample(name: String): ExampleModel
+    abstract fun getExample(name: String): ExampleModel
 
-    suspend fun save(data: ExampleModel) {
+    fun save(data: ExampleModel) {
         insert(data)
     }
 
-    suspend fun save(datas: List<ExampleModel>) {
+    fun save(datas: List<ExampleModel>) {
         insert(datas)
     }
 }
